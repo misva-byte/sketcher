@@ -9,7 +9,7 @@ type ToolbarOptions = {
 }
 
 export class Toolbar {
-  public readonly element: HTMLDivElement
+  public readonly element: HTMLDivElement   
 
   private buttons = new Map<Tool, HTMLButtonElement>()
   private activeTool: Tool
