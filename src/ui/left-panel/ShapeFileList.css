@@ -1,0 +1,159 @@
+/* ================= LEFT PANEL ================= */
+
+.shape-file-list {
+  width: 260px;
+  height: 100%;
+
+  background: #fbfbfc;
+  border-right: 1px solid #e4e6eb;
+
+  padding: 14px 8px;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-y: auto;
+}
+
+/* ================= HEADER ================= */
+
+.shape-file-list h3 {
+  margin: 0 0 14px 6px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #070707;
+  text-transform: none;
+}
+
+/* ================= ROWS ================= */
+
+.shape-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 10px;
+  margin-bottom: 6px;
+
+  width: 100%;
+
+  border-radius: 10px;
+  background: #e8e8e8;
+  cursor: pointer;
+
+  transition:
+    background 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.shape-row:hover {
+  background: #f1f3f6;
+}
+
+.shape-row.active {
+  background: #ffffff;
+  box-shadow:
+    inset 0 0 0 1px #c7d2fe,
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.shape-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.shape-left span {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================= SHAPE ICON ================= */
+
+.shape-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: #9ca3af;
+}
+
+/* Per-shape color */
+.shape-icon.line { background: #111827; }
+.shape-icon.circle { background: #2563eb; }
+.shape-icon.ellipse { background: #9333ea; }
+.shape-icon.polyline { background: #16a34a; }
+
+/* ================= ACTIONS ================= */
+
+.shape-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+/* Show actions on hover / active */
+.shape-row:hover .shape-actions,
+.shape-row.active .shape-actions {
+  opacity: 1;
+}
+
+.shape-actions button {
+  background: transparent;
+  border: none;
+  padding: 6px;
+
+  cursor: pointer;
+  color: #6b7281;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.12s ease,
+    color 0.12s ease;
+}
+
+.shape-actions button:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* Delete hint */
+.shape-actions button:last-child:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ================= HIDDEN STATE ================= */
+
+.shape-row.hidden {
+  opacity: 0.4;
+}
+
+/* ================= SCROLLBAR ================= */
+
+.shape-file-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.shape-file-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.shape-file-list::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,120 @@
+/* ================= TOOLBAR ================= */
+
+.toolbar {
+  height: 56px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0; /* no side gaps */
+
+  background: #ffffff;
+  border-bottom: 1px solid #e4e6eb;
+
+  z-index: 10;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Inner container ---------- */
+/* aligns buttons with panels & canvas */
+
+.toolbar-inner {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 0 12px; 
+}
+
+/* ---------- Groups ---------- */
+
+.tool-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+}
+.tool-group + .tool-group {
+  margin-left: 850px;
+}
+
+/* ================= BUTTONS ================= */
+
+.tool-btn {
+  height: 36px;
+  min-width: 108px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #f2f3f5;
+  border: 1px solid #e1e3e6;
+  border-radius: 10px;
+
+  cursor: pointer;
+  color: #111;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.06s ease;
+}
+
+.tool-btn:hover {
+  background: #e9ebee;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tool-btn:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Active tool ---------- */
+
+.tool-btn.active {
+  background: #ffffff;
+  border-color: #b6c4ff;
+  box-shadow: 0 0 0 2px rgba(182, 196, 255, 0.55);
+}
+
+/* ================= ICON ================= */
+
+.tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  stroke: currentColor;
+  display: block;
+}
+
+/* ================= LABEL ================= */
+
+.tool-label {
+  font-size: 15px;
+  font-weight: 550;
+  /* line-height: 1; */
+  white-space: nowrap;
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+.tool-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(182, 196, 255, 0.75);
+}

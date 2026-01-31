@@ -1,0 +1,165 @@
+/* ================= PROPERTIES PANEL ================= */
+
+.properties-panel {
+  width: 280px;
+  height: 100%;
+  padding: 18px 16px;
+
+  background: #fcfcfd;
+  border-left: 1px solid #e5e7eb;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-y: auto;
+  
+}
+
+/* ================= HEADER ================= */
+
+.properties-panel h3 {
+  font-size: 30px;
+  font-weight: 650;
+  margin: 0 0 20px 0;
+  color: #111827;
+}
+
+/* ================= SECTIONS ================= */
+
+.properties-panel > div {
+  margin-bottom: 18px;
+}
+
+.properties-panel strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #595f6b;
+  margin-bottom: 10px;
+}
+
+/* ================= ROWS ================= */
+
+.properties-panel div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.properties-panel span {
+  font-size: 15px;
+  color: #191e26;
+  margin-right: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ================= INPUTS ================= */
+
+.properties-panel input[type='number'] {
+  width: 155px;
+  padding: 7px 9px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  border-radius: 8px;
+  border: 1px solid #7f8a9c;
+  background: #f3f4f6;
+
+  outline: none;
+  transition:
+    border-color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.properties-panel input[type='number']:focus {
+  border-color: #1c1e82;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+/* ================= COLOR PICKER ================= */
+
+.properties-panel input[type='color'] {
+  width: 165px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+/* ================= PRIMARY BUTTON ================= */
+
+.properties-panel button {
+  width: 100%;
+  height: 45px;
+  padding: 10px 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #111827;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.05s ease;
+}
+
+.properties-panel button:hover {
+  background: #f3f4f6;
+}
+
+.properties-panel button:active {
+  transform: scale(0.97);
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.properties-panel > div:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+.properties-panel > div:last-child button {
+  flex: 1;
+}
+
+/* Hide button */
+.properties-panel > div:last-child button:first-child {
+  background: #ffffff;
+  margin-top: 6px;
+}
+.properties-panel > div:last-child button:first-child:hover {
+  background: #f3f4f6;
+}
+
+/* Delete button */
+.properties-panel > div:last-child button:last-child {
+  color: #b91c1c;
+  border-color: #fca5a5;
+  margin-top: 6px;
+}
+
+.properties-panel > div:last-child button:last-child:hover {
+  background: #fee2e2;
+}
+
+/* ================= SCROLLBAR ================= */
+
+.properties-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.properties-panel::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
